@@ -9,7 +9,7 @@ K-ICIS 시스템에 축적된 기존 VOC 데이터를 지식베이스로 활용�
 과거 성공 사례 재활용을 통한 문제 해결 효율화<br/><br/>
 🔧 활용 기술 및 Azure 서비스<br/>
 Azure OpenAI: 신규 VOC와 기존 사례 매칭 및 해결방안 생성<br/>
-Text-Embedding + ChromaDB: 과거 VOC 데이터베이스 구축 및 유사 사례 검색 및 VOC 분류, 키워드 추룰로 검색 정확도 향상<br/>
+Text-Embedding + ChromaDB: 과거 VOC 데이터베이스 구축 및 유사 사례 검색 및 VOC 분류, 키워드 추룰로 검색 정확도 향상<br/><br/>
 🧩 아키텍처<br/>
 신규 VOC → 키워드 추출 → 유사 사례 검색 → 해결방안 매칭<br/>
 검증된 해결책 제시 → 고객 피드백 → 결과 저장 → 인덱스 업데이트<br/>
