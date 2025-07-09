@@ -21,7 +21,8 @@ AZURE_EMBEDDING_ENDPOINT = os.getenv("TEXT_EMBEDDING_AZURE_OPENAI_ENDPOINT")
 AZURE_EMBEDDING_API_VERSION = os.getenv("TEXT_EMBEDDING_AZURE_OPENAI_API_VERSION")
 EMBEDDING_DEPLOYMENT_NAME = os.getenv("TEXT_EMBEDDING_DEPLOYMENT_NAME")
 
-PERSIST_DIR = os.getenv("PERSIST_DIR")
+# ChromaDB 저장 경로
+PERSIST_DIR = "./chroma_db"
 
 # OpenAI 챗 함수
 def get_openai_client(messages):
@@ -49,7 +50,8 @@ def get_query_embedding(query):
     return response.data[0].embedding
 
 # ChromaDB 검색 함수
-def search_chroma(query, top_k=3, persist_dir=PERSIST_DIR):
+def search_chroma(query, top_k=3):
+    persist_dir = "./chroma_db"  # 고정된 저장 경로
     client = PersistentClient(path=persist_dir)
     collection = client.get_or_create_collection("pdf_collection")
     query_emb = get_query_embedding(query)
@@ -60,5 +62,3 @@ def search_chroma(query, top_k=3, persist_dir=PERSIST_DIR):
     )
     return results["documents"][0] if results["documents"] else []
 
-# PDF 관련 함수는 pdf_to_vectordb.py에서 import하여 그대로 사용
-# extract_text_from_pdf, split_text, get_azure_embeddings, save_to_chroma

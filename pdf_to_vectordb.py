@@ -18,7 +18,7 @@ AZURE_OPENAI_API_VERSION = os.getenv("TEXT_EMBEDDING_AZURE_OPENAI_API_VERSION")
 DEPLOYMENT_NAME = os.getenv("TEXT_EMBEDDING_DEPLOYMENT_NAME")
 
 # Chroma DB 저장 경로
-PERSIST_DIR = os.getenv("PERSIST_DIR", "./chroma_db")
+PERSIST_DIR = "./chroma_db"
 
 # PDF에서 텍스트 추출 함수
 def extract_text_from_pdf(pdf_path):
@@ -55,9 +55,8 @@ def get_azure_embeddings(text_list):
 # Chroma DB에 저장 함수
 from chromadb import PersistentClient
 
-def save_to_chroma(text_chunks, embeddings, persist_dir=None, pdf_path=None):
-    if persist_dir is None:
-        persist_dir = PERSIST_DIR
+def save_to_chroma(text_chunks, embeddings, pdf_path=None):
+    persist_dir = "./chroma_db"  # 고정된 저장 경로
     client = PersistentClient(path=persist_dir)
     collection = client.get_or_create_collection("pdf_collection")
     # 파일명과 타임스탬프를 prefix로 사용
@@ -83,8 +82,9 @@ def save_to_chroma(text_chunks, embeddings, persist_dir=None, pdf_path=None):
     else:
         print("[경고] 저장 폴더가 존재하지 않습니다.")
 
-def show_chroma_db_status(persist_dir="./chroma_db", recent_n=5):
-    """ChromaDB에 누적된 전체 청크/문서 개수와 최근 N개 ID, 내용을 최신순으로 출력"""
+def show_chroma_db_status(recent_n=5):
+    # ChromaDB에 누적된 전체 청크/문서 개수와 최근 N개 ID, 내용을 최신순으로 출력
+    persist_dir = "./chroma_db"
     client = PersistentClient(path=persist_dir)
     collection = client.get_or_create_collection("pdf_collection")
     count = collection.count()
