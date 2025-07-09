@@ -18,3 +18,6 @@ persisted_data/
 
 # 기타
 .deployment
+
+# 환경 변수 파일
+.env/
