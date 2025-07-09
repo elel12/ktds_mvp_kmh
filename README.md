@@ -1,17 +1,15 @@
-# ktds_mvp_kmh
+# ✅ 프로젝트 1: K-ICIS 오더 VOC 전문 상담 챗봇
 
-https://dev-user22-webapp.azurewebsites.net/
-
-✅ 프로젝트 1: K-ICIS 오더 VOC 전문 상담 챗봇
+참조 : https://dev-user22-webapp.azurewebsites.net/
 
 📌 개요 및 목적<br/>
-K-ICIS 시스템에 축적된 기존 VOC 데이터를 Azure AI Search에 구축하여 지식베이스로 활용하는 AI 상담 챗봇입니다. 신규 VOC가 접수되면 유사한 과거 사례를 자동 검색하여 검증된 해결 방안을 즉시 제공합니다.<br/>
+K-ICIS 시스템에 축적된 기존 VOC 데이터를 지식베이스로 활용하는 AI 상담 챗봇입니다. 신규 VOC가 접수되면 유사한 과거 사례를 자동 검색하여 검증된 해결 방안을 즉시 제공합니다.<br/>
 기존 VOC 사례 기반 즉시 해결방안 제시<br/>
 상담사 경험과 노하우의 체계적 활용<br/>
 과거 성공 사례 재활용을 통한 문제 해결 효율화<br/><br/>
 🔧 활용 기술 및 Azure 서비스<br/>
 Azure OpenAI: 신규 VOC와 기존 사례 매칭 및 해결방안 생성<br/>
-Azure AI Search: 과거 VOC 데이터베이스 구축 및 유사 사례 검색<br/>
+ChromaDB + Text-Embedding: 과거 VOC 데이터베이스 구축 및 유사 사례 검색<br/>
 Azure Cognitive Services: VOC 분류 및 키워드 추출로 검색 정확도 향상<br/><br/>
 🧩 아키텍처<br/>
 신규 VOC → 키워드 추출 → 유사 사례 검색 → 해결방안 매칭<br/>
