@@ -36,6 +36,7 @@ K-ICIS 시스템에 축적된 기존 VOC 데이터를 지식베이스로 활용�
 * 안심센터 검증현황 문제가 발생했을때 어떻게 처리해야돼?
 * 너가 알고있는 SRM 번호를 중심으로 답변해줘
 * 처리할때 사용한 쿼리 있으면 알려줘
+* k-icis 챗봇 제안 내용 알려줘
 
 
 [Azure 기반 생성형 AI MVP프로젝트 제안서_강민호.pdf](https://github.com/user-attachments/files/21152187/Azure.AI.MVP._.pdf)
