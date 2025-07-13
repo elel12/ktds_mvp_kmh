@@ -1,4 +1,4 @@
-# ✅ 프로젝트 1: K-ICIS 오더 VOC 전문 상담 챗봇
+# ✅ 프로젝트 : K-ICIS 오더 VOC 전문 상담 챗봇
 
 참조 : https://dev-user22-webapp.azurewebsites.net/
 
@@ -26,3 +26,20 @@ K-ICIS 시스템에 축적된 기존 VOC 데이터를 지식베이스로 활용�
 - 기술적: 기존 VOC 데이터 품질 검증, 중복 제거, 최적 인덱스 설계<br/>
 - 운영적: 상담사 교육, 에스컬레이션 프로세스, 정기적 품질 관리<br/>
 - 보안: 개인정보 마스킹, 접근 권한 관리, 감사 추적 체계<br/>
+
+=======
+
+예제
+* SRM25061233806에 대해 알아?
+* 유사한 내용 SRM 번호 목록 뽑아줘
+* 처리할때 사용한 쿼리 있으면 알려줘
+* k-icis 챗봇 제안 내용 알려줘
+
+
+[Azure 기반 생성형 AI MVP프로젝트 제안서_강민호.pdf](https://github.com/user-attachments/files/21152187/Azure.AI.MVP._.pdf)
+
+[pstn_voc.pdf](https://github.com/user-attachments/files/21152189/pstn_voc.pdf)
+
+
+
+
